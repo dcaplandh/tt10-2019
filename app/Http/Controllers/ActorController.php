@@ -14,7 +14,11 @@ class ActorController extends Controller
      */
     public function index()
     {
-        //
+        $actores = Actor::all();
+        foreach($actores as $actor){
+            echo $actor->getLink()."<br>";
+
+        }
     }
 
     /**

@@ -30,7 +30,7 @@ Route::post('/movies/create','MoviesController@store');
 Route::get('/movies/{id}','MoviesController@show');
 Route::get('/movies/edit/{id}','MoviesController@edit');
 Route::post('/movies/edit/{id}','MoviesController@update');
-Route::get('/movie/destroy/{id}','MoviesController@destroy');
+Route::get('/movies/destroy/{id}','MoviesController@destroy');
 
 //Route::post('/agregarAlCarrito','CarritoController@agregarProducto');
 Route::post('/agregarAlCarrito',function(Request $request){
@@ -42,3 +42,5 @@ Route::post('/agregarAlCarrito',function(Request $request){
     $relacion->carrito_id = $carrito_id;
     $relacion->save();
 });
+
+Route::get("/actors",'ActorController@index');

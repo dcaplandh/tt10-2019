@@ -46,6 +46,7 @@ class MoviesController extends Controller
         $nuevaPeli->title = $titulo;
         $nuevaPeli->awards = $premios;
         $nuevaPeli->rating = $rating;
+        $nuevaPeli->release_date = "2019-12-10 19:33:11";
         $nuevaPeli->save();
 
         return redirect("/movies/all");
