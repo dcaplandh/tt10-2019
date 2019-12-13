@@ -14,4 +14,12 @@ class Movie extends Model
         echo "La fecha de estreno es ".$this->release_date;
     }
 
+    public function actors(){
+        return $this->belongsToMany(Actor::class);
+    }
+
+    public function genre(){
+        return $this->belongsTo(Genre::class);
+    }
+
 }

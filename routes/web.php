@@ -44,3 +44,8 @@ Route::post('/agregarAlCarrito',function(Request $request){
 });
 
 Route::get("/actors",'ActorController@index');
+
+Route::get("/actor_movie","MoviesController@genre");
+
+Route::get("todasLasPeliculas","MoviesController@todas");
+Route::get("/pelicula/{id}","MoviesController@verUna");
