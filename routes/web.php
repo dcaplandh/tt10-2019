@@ -49,3 +49,20 @@ Route::get("/actor_movie","MoviesController@genre");
 
 Route::get("todasLasPeliculas","MoviesController@todas");
 Route::get("/pelicula/{id}","MoviesController@verUna");
+
+Route::get('/test',function(){
+    
+});
+
+/* ECOMMERCE - Clase Virtual */
+
+//lista de productos
+Route::get('/productos','ProductController@index');
+//agregarAlCarrito()
+Route::post('/agregarAlCarrito','CartProductController@store');
+//el carrito
+Route::get('/carrito','CartController@carritoActual');
+//cerrarCompra()
+Route::get('/comprar','CartController@finalizar');
+//historial de compras
+Route::get('/compras','CartController@finalizados');
